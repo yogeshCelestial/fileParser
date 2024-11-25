@@ -22,3 +22,21 @@ File-parser is a tool that converts json/csv files into json string data.
         });
 ```
 
+### Using CSV Parser from Frontend
+
+
+### Using JSON Parser from Frontend
+
+```       
+        const formData = new FormData();
+        formData.append("csvFile", file);
+
+        const response = await fetch("http://localhost:9000/api/parser/csv", {
+            method: "POST",
+            headers: {
+                "contentType":"multipart/form-data"
+            },
+            body: formData,
+        });
+```
+
